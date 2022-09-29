@@ -1,0 +1,19 @@
+<div class="ngx-filter-container">
+  <ng-container *ngIf="searchType==='search-full'">
+    <ngx-filter-group [filterConfig]="filterConfig" [lang]="lang" (onFilter)="onFilterData($event)"
+      (onRefresh)="refresh($event)" [datas]="datas" [withRefresh]="withRefresh">
+    </ngx-filter-group>
+    <div class="ngx-filter-content-left">
+      <ng-content></ng-content>
+      <ngx-expandable-search *ngIf="withGlobalSearch" [lang]="lang" (onSearch)="onFilterData($event)"
+        [placeholder]="placeholder" (onRefresh)="refresh($event)" [datas]="datas">
+      </ngx-expandable-search>
+    </div>
+  </ng-container>
+  <ngx-filter-group *ngIf="searchType==='search-group'" [filterConfig]="filterConfig" [lang]="lang"
+    (onFilter)="onFilterData($event)" (onRefresh)="refresh($event)" [datas]="datas" [withRefresh]="withRefresh">
+  </ngx-filter-group>
+  <ngx-expandable-search *ngIf="searchType==='search-text'" [lang]="lang" (onSearch)="onFilterData($event)"
+    [placeholder]="placeholder" (onRefresh)="refresh($event)" [datas]="datas">
+  </ngx-expandable-search>
+</div>

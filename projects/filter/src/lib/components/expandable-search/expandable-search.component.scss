@@ -1,0 +1,43 @@
+:host {
+	position: relative;
+}
+
+.search-text-container {
+	background: rgba(201, 198, 198, 0.857);
+	border-radius: 8px;
+	display: inline-block;
+
+	nb-icon {
+		display: inline-flex;
+	}
+
+	.not-expanded-search {
+		width: 52px;
+		height: 42px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	}
+
+	.expanded-search {
+		height: 42px;
+		display: flex;
+		align-items: center;
+		padding: 0 10px;
+		gap: 10px;
+
+		input {
+			border: none;
+			height: 100%;
+			outline: none;
+			background: inherit;
+		}
+
+		nb-icon {
+			width: 20px;
+			cursor: pointer;
+		}
+	}
+}

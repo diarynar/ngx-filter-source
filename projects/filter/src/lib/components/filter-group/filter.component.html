@@ -1,0 +1,39 @@
+<div>
+  <ul class="filter-container">
+    <ng-container *ngFor="let item of filterConfig">
+      <li class="filter-item">
+        <div *ngIf="item.filterData.type==='select'" [ngClass]="item.filterData?.class">
+          <mat-form-field appearance="text">
+            <mat-select [(ngModel)]="item.filterData.value" (ngModelChange)="onApplyFilter()">
+              <mat-option value=""> {{item.filterData.label}}
+              </mat-option>
+              <mat-option [value]="option.value" *ngFor="let option of item.filterData.options"> {{option.label}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div *ngIf="item.filterData.type==='date'" [ngClass]="item.filterData?.class">
+          <mat-form-field appearance="text">
+            <input matInput placeholder="{{item.filterData?.label}}" [matDatepicker]="picker"
+              [min]="item.filterData.max" [max]="item.filterData.max" [(ngModel)]="item.filterData.value"
+              (ngModelChange)="onApplyFilter()">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div *ngIf="item.filterData.type==='sort'" [ngClass]="item.filterData?.class">
+          <div class="filter-item-inner" (click)="onSortChange(item.filterData)">
+            <span class="ngx-filter-title">{{item.filterData?.label}}</span>
+            <mat-icon *ngIf="item.filterData.value==='asc'">arrow_downward</mat-icon>
+            <mat-icon *ngIf="item.filterData.value!=='asc'">arrow_upward</mat-icon>
+          </div>
+        </div>
+      </li>
+    </ng-container>
+    <li *ngIf="withRefresh">
+      <button mat-mini-fab class="ngx-refresh" (click)="refresh()">
+        <mat-icon>refresh</mat-icon>
+      </button>
+    </li>
+  </ul>
+</div>

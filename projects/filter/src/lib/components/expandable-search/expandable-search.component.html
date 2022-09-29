@@ -1,0 +1,11 @@
+<div class="search-text-container">
+	<div class="expanded-search" *ngIf="showField">
+		<input class="search-input" [(ngModel)]="searchText" #search (ngModelChange)="searchUpdate.next($event)"
+			[placeholder]="placeholder" type="text">
+		<nb-icon [icon]="closeIcon" [size]="1.5" (click)="onExpand()"></nb-icon>
+	</div>
+	<div class="not-expanded-search" (click)="onExpand()" *ngIf="!showField">
+		<nb-icon [icon]="icon" [size]="1.5"></nb-icon>
+	</div>
+
+</div>
