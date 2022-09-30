@@ -13852,7 +13852,6 @@ export class AppComponent implements OnInit {
     this.ngxFilterInit = JSON.stringify(this.ngxFilterData)
   }
   onFilter(event) {
-    console.log('event-------------', event);
     if (event.datas) {
       this.displayDatas = event.datas
     }

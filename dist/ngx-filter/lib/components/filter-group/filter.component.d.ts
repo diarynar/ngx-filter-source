@@ -15,6 +15,7 @@ export declare class FilterComponent implements OnInit {
     filterConfigBackup: any[];
     ngOnInit(): void;
     onSortChange(item: any): void;
+    ngOnChanges(): void;
     refresh(): void;
     onApplyFilter(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<FilterComponent, never>;

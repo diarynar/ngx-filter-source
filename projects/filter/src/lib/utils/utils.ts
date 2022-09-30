@@ -47,6 +47,7 @@ export const onApply = (datas, filterConfig) => {
             }
             return isTrue
         }).value()
+
         return { filterConfig, datas: dataFilteredByDate, type: 'group' }
     } catch (error) {
         return { filter: {}, datas: [], type: 'group' }
