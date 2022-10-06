@@ -19,5 +19,5 @@ export declare class FilterComponent implements OnInit {
     refresh(): void;
     onApplyFilter(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<FilterComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FilterComponent, "ngx-filter-group", never, { "filterConfig": "filterConfig"; "lang": "lang"; "withRefresh": "withRefresh"; "datas": "datas"; }, { "onSort": "onSort"; "onFilter": "onFilter"; "onRefresh": "onRefresh"; }, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FilterComponent, "ngx-filter-group", never, { "filterConfig": "filterConfig"; "lang": "lang"; "withRefresh": "withRefresh"; "datas": "datas"; }, { "onSort": "onSort"; "onFilter": "onFilter"; "onRefresh": "onRefresh"; }, never, never, false>;
 }
