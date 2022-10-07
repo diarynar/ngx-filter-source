@@ -18,5 +18,5 @@ export declare class AppComponent implements OnInit {
     onFilterData(e: any): void;
     refresh(e: any): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<AppComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AppComponent, "ngx-filter", never, { "filterConfig": "filterConfig"; "lang": "lang"; "withRefresh": "withRefresh"; "withGlobalSearch": "withGlobalSearch"; "placeholder": "placeholder"; "searchType": "searchType"; "datas": "datas"; }, { "onFilter": "onFilter"; "onRefresh": "onRefresh"; }, never, ["*"], false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AppComponent, "ngx-filter", never, { "filterConfig": "filterConfig"; "lang": "lang"; "withRefresh": "withRefresh"; "withGlobalSearch": "withGlobalSearch"; "placeholder": "placeholder"; "searchType": "searchType"; "datas": "datas"; }, { "onFilter": "onFilter"; "onRefresh": "onRefresh"; }, never, ["*"]>;
 }

@@ -23,6 +23,21 @@ export class AppComponent implements OnInit {
 
       }
     },
+
+    {
+      filterData: {
+        type: 'sort',
+        key: 'Name',
+        value: "asc",
+        label: 'Ordonner par le nom du template'
+      }
+    },
+    {
+      filterData: {
+        type: 'divider',
+        class: "divider-class"
+      }
+    },
     {
       filterData: {
         type: 'date',
@@ -41,14 +56,6 @@ export class AppComponent implements OnInit {
         class: "class-date-max"
       }
     },
-    {
-      filterData: {
-        type: 'sort',
-        key: 'Name',
-        value: "asc",
-        label: 'Ordonner par le nom du template'
-      }
-    }
   ]
   datas = [
     {
@@ -13852,6 +13859,8 @@ export class AppComponent implements OnInit {
     this.ngxFilterInit = JSON.stringify(this.ngxFilterData)
   }
   onFilter(event) {
+    console.log('-----------EV', event);
+
     if (event.datas) {
       this.displayDatas = event.datas
     }

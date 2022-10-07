@@ -25,8 +25,12 @@ export interface ISort {
     label?: string;
     class?: string;
 }
+export interface IDivider {
+    type: "divider";
+    class?: string;
+}
 export interface IFilterConfiguration {
-    filterData: Idate | ISelect | ISort;
+    filterData: Idate | ISelect | ISort | IDivider;
 }
 export interface IFilterConfig {
     type: "select" | "date" | "sort";

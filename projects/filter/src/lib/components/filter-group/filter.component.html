@@ -1,8 +1,10 @@
 <div>
   <ul class="filter-container">
     <ng-container *ngFor="let item of filterConfig">
-      <li class="filter-item">
-        <div *ngIf="item.filterData.type==='select'" [ngClass]="item.filterData?.class">
+      <div *ngIf="item.filterData.type==='divider'" [ngClass]="'ngx-filter-divider '+ item.filterData?.class"
+        class="ngx-filter-divider"></div>
+      <li *ngIf="item.filterData.type!=='divider'" class="filter-item" [ngClass]=" item.filterData?.class">
+        <div *ngIf="item.filterData.type==='select'">
           <mat-form-field appearance="text">
             <mat-select [(ngModel)]="item.filterData.value" (ngModelChange)="onApplyFilter()">
               <mat-option value=""> {{item.filterData.label}}
@@ -12,7 +14,8 @@
             </mat-select>
           </mat-form-field>
         </div>
-        <div *ngIf="item.filterData.type==='date'" [ngClass]="item.filterData?.class">
+
+        <div *ngIf="item.filterData.type==='date'">
           <mat-form-field appearance="text">
             <input matInput placeholder="{{item.filterData?.label}}" [matDatepicker]="picker"
               [min]="item.filterData.max" [max]="item.filterData.max" [(ngModel)]="item.filterData.value"

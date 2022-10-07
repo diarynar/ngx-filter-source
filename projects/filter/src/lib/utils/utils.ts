@@ -55,7 +55,7 @@ export const onApply = (datas, filterConfig) => {
 
 }
 
-export const searchGlobal = (datas: any[], text: string) => {
-    const result = datas.filter((data) => Object.values(data).some((val: any) => String(val).toLowerCase().includes(text.toLowerCase())));
-    return { datas: result, filterConfig: text, type: 'text' }
+export const searchGlobal = (datas: any[], text = "") => {
+    const result = datas.filter((data) => Object.values(data).some((val: any) => String(val)?.toLowerCase().includes(text?.toLowerCase())));
+    return { datas: result, searchText: text, type: 'text' }
 }
