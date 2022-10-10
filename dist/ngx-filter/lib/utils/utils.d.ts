@@ -1,11 +1,11 @@
-export declare const onApply: (datas: any, filterConfig: any) => {
+export declare const onApply: (datas: any[], filterConfig: any) => {
     filterConfig: any;
-    datas: any;
+    datas: any[];
     type: string;
     filter?: undefined;
 } | {
     filter: {};
-    datas: any[];
+    datas: never[];
     type: string;
     filterConfig?: undefined;
 };
