@@ -1,10 +1,11 @@
-import { ExpandableSearchComponent, FilterComponent } from '../public-api';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { ExpandableSearchComponent } from './components/expandable-search/expandable-search.component';
+import { FilterComponent } from './components/filter-group/filter.component';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';

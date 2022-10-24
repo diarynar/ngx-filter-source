@@ -1,14 +1,17 @@
 ::ng-deep {
   .filter-container {
-    display: flex;
+    // display: flex;
     align-items: center;
     gap: 10px;
     margin: 0;
     padding: 0;
+    position: relative;
 
     .filter-item {
-      display: flex;
+      display: inline-block;
       align-items: center;
+      margin-left: 10px;
+      margin-bottom: 10px;
 
       .mat-form-field-infix {
         display: block;
@@ -75,6 +78,11 @@
 
     .mat-form-field-appearance-outline .mat-select-arrow-wrapper {
       transform: translateY(0%) !important;
+    }
+
+    .ngx-refresh-container {
+      display: inline-block;
+      margin-left: 10px;
     }
   }
 
